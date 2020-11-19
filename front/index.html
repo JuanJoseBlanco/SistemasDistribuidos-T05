@@ -8,18 +8,39 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 <body>
-    <form action="" class="formulario">
-        <h1 class = "title"> Formulario </h1>
-        <input type = "text" class = "input">
+    <form onsubmit="sendInfo(); return false();" class="formulario">
+        <h1>FORMULARIO</h1>
+        <input type = "text" name = "name" class = "input">
         <label for = "" class = "label">Nombre</label>
-        <input type = "text" class = "input">
+        <input type = "text" name = "age" class = "input">
         <label for = "" class = "label">Edad</label>
-        <input type = "text" class = "input">
+        <input type = "text" name = "phone" class = "input">
         <label for = "" class = "label">Teléfono</label>
-        <input type = "text" class = "input">
+        <input type = "text" name = "id" class = "input">
         <label for = "" class = "label">Identificación</label>     
-        <input type="submit" class="submit">
+        <button type="submit" class="btn btn-block btn-primary" id = submit> Enviar </button>
     </form>    
+
+    <div class = "list">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Teléfono</th>
+                    <th>Id</th>
+                </tr>
+            </thead>
+
+            <tbody id="people">
+                
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src='main.js'></script>
 </body>
 </html>
